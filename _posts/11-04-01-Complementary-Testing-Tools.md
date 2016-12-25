@@ -15,7 +15,7 @@ anchor:  complementary_testing_tools
 * [Prophecy] 是个有自己的想法，且非常强大灵活的 PHP 对象 mocking 框架。它整合了 [PHPSpec] 并且可以和 [PHPUnit] 一起使用
 
 [Selenium]: http://seleniumhq.org/
-[integrated with PHPUnit]: http://phpunit.de/manual/current/en/selenium.html
+[integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: http://phpunit.de/
 [PHPSpec]: http://www.phpspec.net/

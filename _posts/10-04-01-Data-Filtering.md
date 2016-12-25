@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 数据过滤
 anchor:  data_filtering
 ---
 
@@ -33,7 +32,13 @@ anchor:  data_filtering
 
 [查看 Sanitization Filters][2]
 
-### 有效性验证
+### Unserialization
+
+It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
+
+If you absolutely must unserialize data from untrusted sources, use PHP 7's [`allowed_classes`][unserialize] option to restrict which object types are allowed to be unserialized.
+
+### Validation
 
 验证是来确保外部输入的是你所想要的内容。比如，你也许需要在处理注册申请时验证 email 地址、手机号码或者年龄等信息的有效性。
 
@@ -47,3 +52,4 @@ anchor:  data_filtering
 [5]: http://php.net/function.filter-input
 [6]: http://php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
+[unserialize]: https://secure.php.net/manual/en/function.unserialize.php

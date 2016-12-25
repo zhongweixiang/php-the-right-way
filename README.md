@@ -18,6 +18,7 @@
 [横幅图片](http://laravel-china.github.io/php-the-right-way/banners.html)
 
 ## 如何贡献
+You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
 
 1. Fork 然后编辑
 2. 安装 [Ruby](https://rvm.io/rvm/install/) 和 [Jekyll](https://github.com/mojombo/jekyll/) 在本地预览
@@ -38,7 +39,7 @@
 * [English](http://www.phptherightway.com)
 * [Bulgarian](http://bg.phptherightway.com)
 * [Chinese (Simplified)](http://laravel-china.github.io/php-the-right-way/)
-* [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way/)
+* [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way)
 * [French](http://eilgin.github.io/php-the-right-way/)
 * [German](http://rwetzlmayr.github.io/php-the-right-way)
 * [Indonesian](http://id.phptherightway.com)
@@ -47,15 +48,16 @@
 * [Korean](http://modernpug.github.io/php-the-right-way)
 * [Persian](http://novid.github.io/php-the-right-way/)
 * [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
+* [Portuguese (Brazil)](http://br.phptherightway.com)
 * [Romanian](https://bgui.github.io/php-the-right-way/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
-* [Serbian](http://smatejic.github.io/php-the-right-way/)
+* [Serbian](http://phpsrbija.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
 * [Spanish](http://phpdevenezuela.github.io/php-the-right-way)
 * [Thai](https://apzentral.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
 
 ### 翻译
 

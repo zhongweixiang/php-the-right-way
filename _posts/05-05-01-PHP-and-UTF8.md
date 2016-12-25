@@ -1,6 +1,6 @@
 ---
-isChild: true
 title:   使用 UTF-8 编码
+isChild: true
 anchor:  php_and_utf8
 ---
 

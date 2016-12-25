@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 命名空间
 anchor:  namespaces
 ---
 
@@ -22,5 +21,5 @@ _命名空间_ 解决了这个问题。如 PHP 手册里所描述，命名空间
 
 
 [namespaces]: http://php.net/language.namespaces
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr4]: http://www.php-fig.org/psr/psr-4/

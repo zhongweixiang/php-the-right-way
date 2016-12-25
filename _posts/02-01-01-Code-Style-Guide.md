@@ -1,5 +1,4 @@
 ---
-title: 代码风格指南
 anchor: code_style_guide
 ---
 
@@ -7,7 +6,7 @@ anchor: code_style_guide
 
 PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发者通常会在自己的项目中使用若干个外部库，因此 PHP 代码遵循（尽可能接近）同一个代码风格就非常重要，这让开发者可以轻松地将多个代码库整合到自己的项目中。
 
-[PHP标准组][fig] 提出并发布了一系列的风格建议。其中有部分是关于代码风格的，即 [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] 和 [PSR-4][psr4]。这些推荐只是一些被其他项目所遵循的规则，如 Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium 等。你可以把这些规则用在自己的项目中，或者继续使用自己的风格。
+[PHP标准组][fig] 提出并发布了一系列的风格建议。其中有部分是关于代码风格的，即 [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] 和 [PSR-4][psr4]。这些推荐只是一些被其他项目所遵循的规则，如 Drupal, Zend, Symfony, Laravel，CakePHP, phpBB, AWS SDK, FuelPHP, Lithium 等。你可以把这些规则用在自己的项目中，或者继续使用自己的风格。
 
 通常情况下，你应该遵循一个已知的标准来编写 PHP 代码。可能是 PSR 的组合或者是 PEAR 或 Zend 编码准则中的一个。这代表其他开发者能够方便的阅读和使用你的代码，并且使用这些组件的应用程序可以和其他第三方的组件保持一致。
 
@@ -21,8 +20,8 @@ PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发
 你可以使用 [PHP_CodeSniffer][phpcs] 来检查代码是否符合这些准则，文本编辑器 [Sublime Text][st-cs] 的插件也可以提供实时检查。
 
 你可以通过以下两个工具来自动修正你的程序语法，让它符合标准。
-一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
-另外一个工具是 [php.tools][phptools]， 它是 sublime text 的一个非常流行的插件[sublime-phpfmt][sublime-phpfmt]，虽然比较新，但是在性能上有了很大的提高，这意味着实时的修复语法会更加的流畅。
+- 一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
+- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
 
 你也可以手动运行 phpcs 命令：
 
@@ -30,18 +29,24 @@ PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发
 
 它会显示出相应的错误以及如何修正的方法。同样地，这条命令也可以用在 git hook 中，如果你的分支代码不符合选择的代码标准则无法提交。
 
-所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的小伙伴能够容易阅读理解即可。
+If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
+[PHP Code Beautifier and Fixer][phpcbf].
 
+    phpcbf -w --standard=PSR2 file.php
+
+Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
+It will show which kind of errors the code structure had before it fixed them.
+
+    php-cs-fixer fix -v --level=psr2 file.php
 
 [fig]: http://www.php-fig.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-[psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr1]: http://www.php-fig.org/psr/psr-1/
+[psr2]: http://www.php-fig.org/psr/psr-2/
+[psr4]: http://www.php-fig.org/psr/psr-4/
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt

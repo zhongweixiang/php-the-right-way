@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 错误报告
 anchor:  error_reporting
 ---
 
@@ -10,7 +9,7 @@ anchor:  error_reporting
 
 ### 开发环境
 
-为了在<strong>开发</strong>环境中显示所有可能的错误，将你的 `php.ini` 进行如下配置：
+为了在 **开发** 环境中显示所有可能的错误，将你的 `php.ini` 进行如下配置：
 
 {% highlight ini %}
 display_errors = On
@@ -33,7 +32,7 @@ log_errors = On
 
 ### 生产环境
 
-为了在<strong>生产</strong>环境中隐藏错误显示，将你的 `php.ini` 进行如下配置：
+为了在 **生产** 环境中隐藏错误显示，将你的 `php.ini` 进行如下配置：
 
 {% highlight ini %}
 display_errors = Off

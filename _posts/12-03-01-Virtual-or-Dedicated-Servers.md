@@ -1,6 +1,6 @@
 ---
-isChild: true
 title: 虚拟或专用服务器
+isChild: true
 anchor:  virtual_or_dedicated_servers
 ---
 
@@ -26,10 +26,14 @@ Apache 有多种方式运行 PHP，最常见的方式就是使用 mode_php5 的 
 如果你追求高性能和高稳定性，可以为 Apache 选择与 nginx 类似的的 FPM 系统 [worker MPM] 或者
 [event MPM]，它们分别使用 mod_fastcgi 和 mod_fcgid。这种方式可以更高效的利用内存，运行速度也更快，但是配置也相对复杂一些。
 
+If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get great performance that is easy to setup.
+
 * [阅读更多 Apache][apache]
 * [阅读更多多进程模块][apache-MPM]
 * [阅读更多 mod_fastcgi][mod_fastcgi]
 * [阅读更多 mod_fcgid][mod_fcgid]
+* [Read more on mod_proxy_fcgi][mod_proxy_fcgi]
+* [Read more on setting up Apache and PHP-FPM with mod_proxy_fcgi][tutorial-mod_proxy_fcgi]
 
 
 [nginx]: http://nginx.org/
@@ -41,5 +45,7 @@ Apache 有多种方式运行 PHP，最常见的方式就是使用 mode_php5 的 
 [event MPM]: http://httpd.apache.org/docs/2.4/mod/event.html
 [apache]: http://httpd.apache.org/
 [apache-MPM]: http://httpd.apache.org/docs/2.4/mod/mpm_common.html
-[mod_fastcgi]: http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html
+[mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
 [mod_fcgid]: http://httpd.apache.org/mod_fcgid/
+[mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
+[tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm

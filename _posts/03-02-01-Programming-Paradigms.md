@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 编程范式
 anchor:  programming_paradigms
 ---
 

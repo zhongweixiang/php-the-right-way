@@ -1,4 +1,5 @@
 ---
+title: Plain PHP Templates
 isChild: true
 title: 原生 PHP 模板
 anchor:  plain_php_templates

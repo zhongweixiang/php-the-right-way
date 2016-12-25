@@ -1,9 +1,8 @@
 ---
 isChild: true
-title: 指导
 anchor:  mentoring
 ---
 
 ## 指导 {#mentoring_title}
 
-* [phpmentoring.org](http://phpmentoring.org/) - PHP 社区中的一对一指导。
+* [php-mentoring.org](http://php-mentoring.org/) - Formal, PHP 社区中的一对一指导。

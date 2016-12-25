@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 密码哈希
 anchor:  password_hashing
 ---
 
@@ -8,7 +7,17 @@ anchor:  password_hashing
 
 每个人在建构 PHP 应用时终究都会加入用户登录的模块。用户的帐号及密码会被储存在数据库中，在登录时用来验证用户。
 
-在存储密码前正确的哈希密码是非常重要的。哈希密码是单向不可逆的，该哈希值是一段固定长度的字符串且无法逆向推算出原始密码。这就代表你可以哈希另一串密码，来比较两者是否是同一个密码，但又无需知道原始的密码。如果你不将密码哈希，那么当未授权的第三者进入你的数据库时，所有用户的帐号资料将会一览无遗。有些用户可能（很不幸的）在别的网站也使用相同的密码。所以务必要重视数据安全的问题。
+It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible,
+one-way function performed against the user's password. This produces a fixed-length string that cannot be feasibly
+reversed. This means you can compare a hash against another to determine if they both came from the same source string,
+but you cannot determine the original string. If passwords are not hashed and your database is accessed by an
+unauthorized third-party, all user accounts are now compromised.
+
+Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
+
+Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
+
+Fortunately, nowadays PHP makes this easy.
 
 **使用 `password_hash` 来哈希密码**
 
@@ -29,10 +38,12 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}
 
+`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts.
 
 * [了解 `password_hash()`] [1]
 * [PHP >= 5.3.7 && < 5.5 的 `password_compat`] [2]
 * [了解密码学中的哈希] [3]
+* [Learn about salts] [5]
 * [PHP `password_hash()` RFC] [4]
 
 
@@ -40,3 +51,4 @@ if (password_verify('bad-password', $passwordHash)) {
 [2]: https://github.com/ircmaxell/password_compat
 [3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
 [4]: https://wiki.php.net/rfc/password_hash
+[5]: https://en.wikipedia.org/wiki/Salt_(cryptography)

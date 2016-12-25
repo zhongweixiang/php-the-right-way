@@ -1,6 +1,6 @@
 ---
+title:   日期和时间
 isChild: true
-title: 日期和时间
 anchor:  date_and_time
 ---
 
@@ -52,6 +52,8 @@ foreach ($periodIterator as $date) {
     echo $date->format('Y-m-d') . ' ';
 }
 {% endhighlight %}
+
+A popular PHP API extension is [Carbon](http://carbon.nesbot.com). It inherits everything in the DateTime class, so involves minimal code alterations, but extra features include Localization support, further ways to add, subtract and format a DateTime object, plus a means to test your code by simulating a date and time of your choosing.
 
 * [阅读 DateTime][datetime]
 * [阅读日期格式][dateformat] (支持的日期字符串格式)

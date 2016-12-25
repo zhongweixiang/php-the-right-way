@@ -1,12 +1,16 @@
 ---
+title:   使用当前稳定版本 (7.0)
 isChild: true
-title:   使用当前稳定版本 (5.6)
 anchor:  use_the_current_stable_version
 ---
 
-## 使用当前稳定版本 (5.6) {#use_the_current_stable_version_title}
+## 使用当前稳定版本 (7.0) {#use_the_current_stable_version_title}
 
-如果你刚开始学习 PHP，请使用最新的稳定版本 [PHP 5.6][php-release]。PHP 近年来有了巨大的改进，增加了许多强大的 [新特性](#language_highlights)。虽然 5.2 和 5.6 之间增加的版本号似乎很小， 但它代表了 _重大的_ 改进。如果你想查找一个函数及其用法，可以去官方手册 [php.net][php-docs] 中查找。
+如果你刚开始学习 PHP，请使用最新的稳定版本 [PHP 7.0][php-release]。PHP 7.0 is very
+new, and adds many amazing [new features](#language_highlights) over the older 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions.
+
+Most commonly in the near future you will find PHP 5.x being used, and the latest 5.x version is 5.6. This is not a bad option, but you should try to upgrade to the latest stable quickly - PHP 5.6 [will not receive security updates beyond 2018](http://php.net/supported-versions.php).  Upgrading is really quite easy, as there are not many [backwards compatibility breaks][php70-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
 
 [php-release]: http://php.net/downloads.php
 [php-docs]: http://php.net/manual/
+[php70-bc]: http://php.net/manual/migration70.incompatible.php

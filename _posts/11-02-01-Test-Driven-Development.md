@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: 测试驱动开发
 anchor:  test_driven_development
 ---
 
@@ -20,14 +19,19 @@ anchor:  test_driven_development
 
 [PHPUnit](https://phpunit.de/) 是业界PHP应用开发单元测试框架的标准，但也有其他可选的框架：
 
-- [atoum](https://github.com/atoum/atoum)
-- [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
-- [PUnit](http://punit.smf.me.uk/)
-- [SimpleTest](http://simpletest.org/)
+* [atoum](https://github.com/atoum/atoum)
+* [Kahlan](https://github.com/crysalead/kahlan)
+* [Peridot](http://peridot-php.github.io/)
+* [SimpleTest](http://simpletest.org)
 
 ### 集成测试
 [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development) 上的定义:
-> 集成测试 (有时候称为集成和测试，缩写为 `I&T`)是把各个模块组合在一起进行整体测试的软件测试阶段。它处于单元测试之后，验收测试之前。集成测试将已经经过了单元测试的模块做为输入模块，组合成一个整体，然后运行集成测试用例，然后输出一个可以进行系统测试的系统。
+
+> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in
+> which individual software modules are combined and tested as a group. It occurs after unit testing and before
+> validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger
+> aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the
+> integrated system ready for system testing.
 
 许多相同的测试工具既可以运用到单元测试，也可以运用到集成测试。
 
